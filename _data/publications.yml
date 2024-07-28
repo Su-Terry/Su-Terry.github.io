@@ -4,7 +4,8 @@ main:
     authors: <strong>Chih-Hai Su*</strong>, Chih-Yao Hu*, Shr-Ruei Tsai*, Jie-Ying Lee*, Chin-Yang Lin, Yu-Lun Liu (*Equal Contribution)
     conference_short: SIGGRAPH
     conference: ACM Special Interest Group on Computer Graphics and Interactive Techniques <strong>(SIGGRAPH)</strong>, 2024.
+    page: https://su-terry.github.io/BoostMVSNeRFs/
     pdf: https://arxiv.org/abs/2407.15848
     code: https://github.com/Su-Terry/BoostMVSNeRFs
-    bibtex: ./_bibliography/Su2024Boost.bib
+    bibtex: https://raw.githubusercontent.com/Su-Terry/Su-Terry.github.io/main/_bibliography/Su2024Boost.bib
     image: ./assets/img/teaser_boostmvsnerfs.png

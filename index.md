@@ -9,7 +9,6 @@ I am currently an undergraduate student at National Yang Ming Chiao Tung Univers
 ## Research Interests
 
 - **Computer Vision:** NeRF
-- **Machine Learning:** meta-learning
 
 ## News
 
