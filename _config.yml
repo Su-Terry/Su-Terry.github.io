@@ -1,11 +1,11 @@
 # Basic Information 
 title: Chih-Hai Su
-position: Undergraduate Student
+Position: Ph.D. Student
 affiliation: National Yang Ming Chiao Tung University
 subaffiliation: Department of Computer Science
 affiliation_link: https://www.nycu.edu.tw/nycu/ch/index
 subaffiliation_link: https://www.cs.nycu.edu.tw/
-email: oceani.c@nycu.edu.tw
+email: oceani.cs13@nycu.edu.tw
 
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
@@ -41,7 +41,7 @@ font: "Serif" # or "Sans Serif"
 
 # Google Analytics ID
 # Please remove this if you don't use Google Analytics
-google_analytics: UA-111540567-4
+# google_analytics: UA-111540567-4
 
 # Use this project as a remote theme for GitHub Pages
 # See the guide here: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
