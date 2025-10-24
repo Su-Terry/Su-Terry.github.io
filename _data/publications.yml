@@ -9,3 +9,33 @@ main:
     code: https://github.com/Su-Terry/BoostMVSNeRFs
     bibtex: https://raw.githubusercontent.com/Su-Terry/Su-Terry.github.io/main/_bibliography/Su2024Boost.bib
     image: ./assets/img/teaser_boostmvsnerfs.png
+
+  - title: "DeNVeR: Deformable Neural Vessel Representations for Unsupervised Video Vessel Segmentation"
+    authors: Chun-Hung Wu, Shih-Hong Chen, Chih-Yao Hu, Hsin-Yu Wu, Kai-Hsin Chen, Yu-You Chen, Chih-Hai Su, Chih-Kuo Lee, Yu-Lun Liu
+    conference_short: CVPR
+    conference: IEEE Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2025.
+    page: https://kirito878.github.io/DeNVeR/
+    pdf: https://arxiv.org/abs/2406.01591
+    code: https://github.com/kirito878/denver
+    bibtex: https://raw.githubusercontent.com/Su-Terry/Su-Terry.github.io/main/_bibliography/denver.bib
+    image: ./assets/img/teaser_denver.png
+
+  - title: "See, Point, Fly: A Learning-Free VLM Framework for Universal Unmanned Aerial Navigation"
+    authors: Chih Yao Hu, Yang-Sen Lin, Yuna Lee, Chih-Hai Su, Jie-Ying Lee, Shr-Ruei Tsai, Chin-Yang Lin, Kuan-Wen Chen, Tsung-Wei Ke, Yu-Lun Liu
+    conference_short: CORL
+    conference: Conference on Robot Learning <strong>(CoRL)</strong>, 2025.
+    page: https://spf-web.pages.dev
+    pdf: https://arxiv.org/abs/2509.22653
+    code: https://github.com/Hu-chih-yao/see-point-fly
+    bibtex: https://raw.githubusercontent.com/Su-Terry/Su-Terry.github.io/main/_bibliography/spf.bib
+    image: ./assets/img/teaser_spf.png
+
+  - title: "LightsOut: Diffusion-based Outpainting for Enhanced Lens Flare Removal"
+    authors: Shr-Ruei Tsai, Wei-Cheng Chang, Jie-Ying Lee, Chih-Hai Su, Yu-Lun Liu
+    conference_short: ICCV
+    conference: IEEE International Conference on Computer Vision <strong>(ICCV)</strong>, 2025.
+    page: https://ray-1026.github.io/lightsout/
+    pdf: https://arxiv.org/abs/2510.15868
+    code: https://github.com/Ray-1026/LightsOut-official
+    bibtex: https://raw.githubusercontent.com/Su-Terry/Su-Terry.github.io/main/_bibliography/lightsout.bib
+    image: ./assets/img/teaser_lightsout.png
