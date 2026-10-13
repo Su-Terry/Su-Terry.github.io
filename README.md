@@ -1,5 +1,14 @@
-# My Personal Homepage
+# su-terry.github.io
 
-[![LICENSE](https://img.shields.io/github/license/yaoyao-liu/minimal-light?style=flat-square&logo=creative-commons&color=EF9421)](https://github.com/yaoyao-liu/minimal-light/blob/main/LICENSE)
+Personal homepage of Chih-Hai (Terry) Su, served by GitHub Pages at https://su-terry.github.io.
 
-This project mostly uses the source code from Yao Yao Liu's minimal-light theme. We thank Yao Yao Liu for his great work and encourage everyone to try this theme.
+The site is a single static page: everything lives in `index.html`. There is no build step (`.nojekyll` turns Jekyll off).
+
+## Updating
+
+- **News**: add a new `<li>` at the top of `#newsList`. Items with `class="old"` stay collapsed behind "Show older news"; keep the latest three without it.
+- **Publications**: copy an `<article class="pub">` block. Add `first` to its class to highlight a first-author paper, and wrap your own name in `<span class="me">`.
+- **Teaser images**: `assets/img/`, ideally JPG about 1200px wide.
+- **BibTeX**: `assets/bib/`.
+- **CV**: replace `assets/files/CV_Chih-Hai_Su.pdf` (keep the file name so the links keep working).
+- **Footer date**: update "Last updated" at the bottom of `index.html`.

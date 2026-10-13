@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chih-Hai Su | NYCU</title>
+<meta name="description" content="Chih-Hai (Terry) Su, Ph.D. student in Computer Science at National Yang Ming Chiao Tung University, working on neural rendering, 3D reconstruction, and the motion and physics of dynamic scenes.">
+<meta name="author" content="Chih-Hai Su">
+<link rel="canonical" href="https://su-terry.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chih-Hai Su">
+<meta property="og:description" content="Ph.D. student at NYCU. Neural rendering, 3D reconstruction, dynamic scenes.">
+<meta property="og:url" content="https://su-terry.github.io/">
+<meta property="og:image" content="https://su-terry.github.io/assets/img/avatar.jpg">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+/* Layout: Barron single column + sticky section nav, venue tags, first-author filter, two-column background block */
+:root {
+  --bg: #ffffff;
+  --fg: #1f2328;
+  --muted: #5b636e;
+  --link: #1563c0;
+  --highlight: #fff8dc;
+  --chip: #eef3fa;
+  --rule: #e4e7eb;
+  --body: "Lato", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #15181c; --fg: #e6e8eb; --muted: #9aa3ad; --link: #6eaaf2; --highlight: #2a2617; --chip: #1c2633; --rule: #2a2f36; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #15181c; --fg: #e6e8eb; --muted: #9aa3ad; --link: #6eaaf2; --highlight: #2a2617; --chip: #1c2633; --rule: #2a2f36; color-scheme: dark }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { background: var(--bg); color: var(--fg); font: 15px/1.6 var(--body); }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; border-radius: 3px; }
+p { margin: 0 0 12px; }
+
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--rule); }
+.top .in { max-width: 820px; margin: 0 auto; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.top strong { font-weight: 700; }
+.top nav { display: flex; gap: 16px; font-size: 14px; flex-wrap: wrap; }
+.top nav a { color: var(--muted); }
+.top nav a:hover { color: var(--link); }
+
+.wrap { max-width: 820px; margin: 0 auto; padding: 36px 20px 64px; display: flex; flex-direction: column; gap: 40px; }
+section { scroll-margin-top: 64px; }
+h2 { font-size: 21px; font-weight: 700; margin: 0 0 12px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) 190px; gap: 32px; align-items: center; }
+.intro h1 { font-size: 30px; font-weight: 400; margin: 0 0 14px; }
+.links { color: var(--muted); }
+.links a { white-space: nowrap; }
+.email { font-family: var(--mono); font-size: 13px; color: var(--fg); }
+.avatar { width: 100%; max-width: 190px; aspect-ratio: 1; border-radius: 50%; object-fit: cover; justify-self: center; }
+
+ul.list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+.list time { display: inline-block; min-width: 76px; color: var(--muted); font-family: var(--mono); font-size: 13px; font-variant-numeric: tabular-nums; }
+.more { background: none; border: 0; padding: 0; margin-top: 8px; color: var(--link); font: inherit; font-size: 14px; cursor: pointer; }
+
+
+.pub { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 24px; padding: 18px 12px; border-radius: 6px; align-items: center; }
+.pub.first { background: var(--highlight); }
+.pub .fig { overflow: hidden; border-radius: 4px; }
+.pub img { display: block; width: 100%; max-width: 100%; transition: transform .35s ease; }
+.pub:hover img { transform: scale(1.04); }
+@media (prefers-reduced-motion: reduce) { .pub img { transition: none; } .pub:hover img { transform: none; } }
+.tag { display: inline-block; font-family: var(--mono); font-size: 11.5px; font-weight: 500; letter-spacing: .02em; background: var(--chip); color: var(--link); padding: 1px 7px; border-radius: 4px; }
+.pub .t { font-weight: 700; font-size: 16px; line-height: 1.4; margin-top: 6px; }
+.pub .a { margin-top: 4px; }
+.pub .l { margin-top: 6px; font-size: 14px; }
+.me { font-weight: 700; }
+.foot { color: var(--muted); font-size: 13px; margin-top: 8px; }
+
+.bg { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 36px 40px; }
+.bg h3 { font-size: 16px; font-weight: 700; margin: 0 0 10px; }
+.item { display: flex; flex-direction: column; margin-bottom: 12px; }
+.item .when { font-family: var(--mono); font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.item .sub { color: var(--muted); font-size: 14px; }
+footer { color: var(--muted); font-size: 13px; text-align: right; border-top: 1px solid var(--rule); padding-top: 12px; }
+
+@media (max-width: 640px) {
+  .intro { grid-template-columns: 1fr; }
+  .avatar { grid-row: 1; max-width: 140px; }
+  .pub { grid-template-columns: 1fr; gap: 12px; }
+  .bg { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="in">
+    <strong>Chih-Hai Su</strong>
+    <nav><a href="#news">News</a><a href="#publications">Publications</a><a href="#background">Background</a><a href="assets/files/CV_Chih-Hai_Su.pdf">CV</a></nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="intro">
+    <div>
+      <h1>Chih-Hai (Terry) Su</h1>
+      <p>I'm a Ph.D. student in Computer Science at <a href="https://www.nycu.edu.tw/">National Yang Ming Chiao Tung University</a>, advised by <a href="https://yulunalexliu.github.io/">Prof. Yu-Lun Liu</a> in the Computational Photography Lab and supported by the NSTC Doctoral Fellowship. I was an Applied Scientist Intern at Amazon in 2025.</p>
+      <p>My research sits between graphics and vision: <strong>neural rendering</strong>, <strong>3D reconstruction</strong>, and recovering the <strong>motion and physics</strong> of dynamic scenes from video. My work has appeared at SIGGRAPH, CVPR, ICCV, and CoRL.</p>
+      <p class="links">
+        <span class="email">oceani.cs13@nycu.edu.tw</span><br>
+        <a href="assets/files/CV_Chih-Hai_Su.pdf">CV</a> &nbsp;/&nbsp;
+        <a href="https://scholar.google.com/citations?user=glkS-7AAAAAJ">Scholar</a> &nbsp;/&nbsp;
+        <a href="https://github.com/Su-Terry">GitHub</a> &nbsp;/&nbsp;
+        <a href="https://www.linkedin.com/in/ohinic/">LinkedIn</a> &nbsp;/&nbsp;
+        <a href="https://orcid.org/0009-0002-8500-9161">ORCID</a>
+      </p>
+    </div>
+    <img class="avatar" src="assets/img/avatar.jpg" alt="Portrait of Chih-Hai Su">
+  </section>
+
+  <section id="news">
+    <h2>News</h2>
+    <ul class="list" id="newsList">
+      <li><time>2025.09</time> See, Point, Fly accepted to CoRL 2025.</li>
+      <li><time>2025.06</time> LightsOut accepted to ICCV 2025.</li>
+      <li><time>2025.02</time> Started my Ph.D. at NYCU with the NSTC Doctoral Fellowship, and joined Amazon as an Applied Scientist Intern.</li>
+      <li class="old"><time>2025.02</time> DeNVeR accepted to CVPR 2025.</li>
+      <li class="old"><time>2024.05</time> BoostMVSNeRFs accepted to SIGGRAPH 2024.</li>
+    </ul>
+    <button class="more" id="newsMore" type="button" aria-expanded="false">Show older news</button>
+  </section>
+
+  <section id="publications">
+    <h2>Publications
+    </h2>
+    <div>
+      <article class="pub">
+        <div class="fig"><img src="assets/img/teaser_spf.jpg" alt="See, Point, Fly teaser"></div>
+        <div>
+          <span class="tag">CoRL 2025</span>
+          <div class="t"><a href="https://spf-web.pages.dev">See, Point, Fly: A Learning-Free VLM Framework for Universal Unmanned Aerial Navigation</a></div>
+          <div class="a">Chih-Yao Hu, Yang-Sen Lin, Yuna Lee, <span class="me">Chih-Hai Su</span>, Jie-Ying Lee, Shr-Ruei Tsai, Chin-Yang Lin, Kuan-Wen Chen, Tsung-Wei Ke, Yu-Lun Liu</div>
+          <div class="l"><a href="https://spf-web.pages.dev">project page</a> / <a href="https://arxiv.org/abs/2509.22653">arXiv</a> / <a href="https://github.com/Hu-chih-yao/see-point-fly">code</a> / <a href="assets/bib/spf.bib">bibtex</a></div>
+        </div>
+      </article>
+      <article class="pub">
+        <div class="fig"><img src="assets/img/teaser_lightsout.jpg" alt="LightsOut teaser"></div>
+        <div>
+          <span class="tag">ICCV 2025</span>
+          <div class="t"><a href="https://ray-1026.github.io/lightsout/">LightsOut: Diffusion-based Outpainting for Enhanced Lens Flare Removal</a></div>
+          <div class="a">Shr-Ruei Tsai, Wei-Cheng Chang, Jie-Ying Lee, <span class="me">Chih-Hai Su</span>, Yu-Lun Liu</div>
+          <div class="l"><a href="https://ray-1026.github.io/lightsout/">project page</a> / <a href="https://arxiv.org/abs/2510.15868">arXiv</a> / <a href="https://github.com/Ray-1026/LightsOut-official">code</a> / <a href="assets/bib/lightsout.bib">bibtex</a></div>
+        </div>
+      </article>
+      <article class="pub">
+        <div class="fig"><img src="assets/img/teaser_denver.jpg" alt="DeNVeR teaser"></div>
+        <div>
+          <span class="tag">CVPR 2025</span>
+          <div class="t"><a href="https://kirito878.github.io/DeNVeR/">DeNVeR: Deformable Neural Vessel Representations for Unsupervised Video Vessel Segmentation</a></div>
+          <div class="a">Chun-Hung Wu, Shih-Hong Chen, Chih-Yao Hu, Hsin-Yu Wu, Kai-Hsin Chen, Yu-You Chen, <span class="me">Chih-Hai Su</span>, Chih-Kuo Lee, Yu-Lun Liu</div>
+          <div class="l"><a href="https://kirito878.github.io/DeNVeR/">project page</a> / <a href="https://arxiv.org/abs/2406.01591">arXiv</a> / <a href="https://github.com/kirito878/denver">code</a> / <a href="assets/bib/denver.bib">bibtex</a></div>
+        </div>
+      </article>
+      <article class="pub first">
+        <div class="fig"><img src="assets/img/teaser_boostmvsnerfs.jpg" alt="BoostMVSNeRFs teaser"></div>
+        <div>
+          <span class="tag">SIGGRAPH 2024</span>
+          <div class="t"><a href="https://su-terry.github.io/BoostMVSNeRFs/">BoostMVSNeRFs: Boosting MVS-based NeRFs to Generalizable View Synthesis in Large-scale Scenes</a></div>
+          <div class="a"><span class="me">Chih-Hai Su*</span>, Chih-Yao Hu*, Shr-Ruei Tsai*, Jie-Ying Lee*, Chin-Yang Lin, Yu-Lun Liu</div>
+          <div class="l"><a href="https://su-terry.github.io/BoostMVSNeRFs/">project page</a> / <a href="https://arxiv.org/abs/2407.15848">arXiv</a> / <a href="https://github.com/Su-Terry/BoostMVSNeRFs">code</a> / <a href="assets/bib/Su2024Boost.bib">bibtex</a></div>
+        </div>
+      </article>
+    </div>
+    <p class="foot">Highlighted: first-authored. * equal contribution.</p>
+  </section>
+
+  <section id="background" class="bg">
+    <div>
+      <h3>Experience</h3>
+      <div class="item"><span class="when">2025.02 – 2025.08</span><span><strong>Amazon</strong>, Applied Scientist Intern</span><span class="sub">CoRo Team · inverse physics from monocular video</span></div>
+      <div class="item"><span class="when">2023.02 – Present</span><span><strong>NYCU Computational Photography Lab</strong>, Student Researcher</span><span class="sub">Neural rendering and motion priors</span></div>
+      <div class="item"><span class="when">2024.05 – 2025.01</span><span><strong>Phison Electronics</strong>, Machine Learning Intern</span><span class="sub">Memory-constrained LLM inference</span></div>
+    </div>
+    <div>
+      <h3>Education</h3>
+      <div class="item"><span class="when">2025.02 – Present</span><span><strong>Ph.D., Computer Science</strong>, NYCU</span></div>
+      <div class="item"><span class="when">2021.09 – 2024.12</span><span><strong>B.S., Computer Science</strong>, NYCU</span></div>
+      <h3 style="margin-top:20px">Honors</h3>
+      <ul class="list">
+        <li><time>2025</time> NSTC Doctoral Fellowship</li>
+        <li><time>2024</time> NSTC Undergraduate Research Grant</li>
+        <li><time>2024</time> 1st Place, NYCU CS Project Competition</li>
+        <li><time>2023</time> Bronze Medal, ICPC Asia Regional</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>Last updated Oct 2026</footer>
+</div>
+
+<script>
+(function () {
+  const olds = document.querySelectorAll('#newsList .old'), more = document.getElementById('newsMore');
+  olds.forEach(li => li.hidden = true);
+  more.addEventListener('click', () => {
+    const open = more.getAttribute('aria-expanded') === 'true';
+    olds.forEach(li => li.hidden = open);
+    more.setAttribute('aria-expanded', String(!open));
+    more.textContent = open ? 'Show older news' : 'Show less';
+  });
+})();
+</script>
+</body>
+</html>
