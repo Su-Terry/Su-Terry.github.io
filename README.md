@@ -12,3 +12,7 @@ The site is a single static page: everything lives in `index.html`. There is no 
 - **BibTeX**: `assets/bib/`.
 - **CV**: replace `assets/files/CV_Chih-Hai_Su.pdf` (keep the file name so the links keep working).
 - **Footer date**: update "Last updated" at the bottom of `index.html`.
+
+## Analytics
+
+Visits are counted with [GoatCounter](https://su-terry.goatcounter.com) (no cookies). Links with a `data-goatcounter-click="name"` attribute are also counted as click events, e.g. `cv`, `scholar`, `spf-arxiv`. Give new links the same attribute to track them.
